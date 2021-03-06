@@ -1,14 +1,17 @@
+import java.util.concurrent.Callable;
+
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-@Command(name = "Main", version = "Main 1.0", mixinStandardHelpOptions = true)
-public class Main implements Runnable{
+@Command(name = "Main", subcommands = { SubcommandServe.class})
+public class Main implements Callable<Integer>{
 
     @Override
-    public void run() {
+    public Integer call() {
         System.out.println("Class Main");
+        return 0;
     }
 
     public static void main(String[] args) {
