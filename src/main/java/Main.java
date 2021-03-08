@@ -7,7 +7,7 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-@Command(name = "Main", subcommands = { SubcommandServe.class, SubcommandClean.class})
+@Command(name = "Main", subcommands = { SubcommandServe.class, SubcommandClean.class, SubcommandBuild.class})
 public class Main implements Callable<Integer>{
 
     @Override
